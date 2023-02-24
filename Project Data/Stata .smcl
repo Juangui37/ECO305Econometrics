@@ -1,0 +1,377 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Stata .smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Mar 2022, 14:18:48
+
+{com}. describe
+
+{txt}Contains data
+ Observations:{res}            50                  
+{txt}    Variables:{res}            18                  
+{txt}{hline}
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+{hline}
+{p 0 48}{res}{bind:state          }{txt}{bind: str14   }{bind:{txt}%14s      }{space 1}{bind:         }{bind:  }{res}{res}State{p_end}
+{p 0 48}{bind:number_of_dac~s}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}# Of DACA Recipients{p_end}
+{p 0 48}{bind:lock_out_state }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Locked States{p_end}
+{p 0 48}{bind:number_of_col~s}{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Number_Of_Colleges{p_end}
+{p 0 48}{bind:public         }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Public{p_end}
+{p 0 48}{bind:private        }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Private{p_end}
+{p 0 48}{bind:acceptance_rate}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Acceptance_Rate{p_end}
+{p 0 48}{bind:sat_score      }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}SAT_Score{p_end}
+{p 0 48}{bind:tuition        }{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Tuition{p_end}
+{p 0 48}{bind:resident_tuit~n}{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Resident_Tuition{p_end}
+{p 0 48}{bind:student_popul~n}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Student_Population{p_end}
+{p 0 48}{bind:number_of_und~e}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Number_Of_Undocmented_People{p_end}
+{p 0 48}{bind:state_populat~n}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}State_Population{p_end}
+{p 0 48}{bind:number_of_spa~s}{txt}{bind: long    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Number_Of_Spanish_Speakers{p_end}
+{p 0 48}{bind:graduation_pr~n}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Graduation_Proportion{p_end}
+{p 0 48}{bind:students_to_f~o}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Students_to_Faculty_Ratio{p_end}
+{p 0 48}{bind:acceptance_pr~n}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:average_tempe~e}{txt}{bind: float   }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Average_Temperature{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+
+{com}. summary
+{err}command {bf}summary{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}state {c |}{res}          0
+{txt}number_of~ts {c |}{res}         50     12206.8    28101.67         30     175110
+{txt}lock_out_s~e {c |}{res}         50          .6    .4948717          0          1
+{txt}number_of~es {c |}{res}         50       135.1    138.2641         10        737
+{txt}{space 6}public {c |}{res}         50       40.82    35.80941          3        192
+{txt}{hline 13}{c +}{hline 57}
+{space 5}private {c |}{res}         50       94.28    104.0614          3        545
+{txt}acceptance~e {c |}{res}         50       71.68    6.828631         58         96
+{txt}{space 3}sat_score {c |}{res}         50     1122.12    44.98736       1022       1220
+{txt}{space 5}tuition {c |}{res}         50       18763     5072.25      10772      34391
+{txt}resident_t~n {c |}{res}         50    14833.16    5392.922       5746      30999
+{txt}{hline 13}{c +}{hline 57}
+student_po~n {c |}{res}         50    395672.3    467043.9      25692    2736006
+{txt}number_of_~e {c |}{res}         50      211600    392304.1          0    2200000
+{txt}state_popu~n {c |}{res}         50     6269467     7007003     575251   3.81e+07
+{txt}number_of~rs {c |}{res}         50    813021.2     1892382       6771   1.06e+07
+{txt}graduation~n {c |}{res}         50       .4834    .0726358        .32         .7
+{txt}{hline 13}{c +}{hline 57}
+students_t~o {c |}{res}         50     14.3802    1.889782      10.13      19.65
+{txt}acceptance~n {c |}{res}         50       .7168    .0682863        .58        .96
+{txt}average_te~e {c |}{res}         50     52.9686    8.373105      32.03      72.95
+
+{com}. su
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}state {c |}{res}          0
+{txt}number_of~ts {c |}{res}         50     12206.8    28101.67         30     175110
+{txt}lock_out_s~e {c |}{res}         50          .6    .4948717          0          1
+{txt}number_of~es {c |}{res}         50       135.1    138.2641         10        737
+{txt}{space 6}public {c |}{res}         50       40.82    35.80941          3        192
+{txt}{hline 13}{c +}{hline 57}
+{space 5}private {c |}{res}         50       94.28    104.0614          3        545
+{txt}acceptance~e {c |}{res}         50       71.68    6.828631         58         96
+{txt}{space 3}sat_score {c |}{res}         50     1122.12    44.98736       1022       1220
+{txt}{space 5}tuition {c |}{res}         50       18763     5072.25      10772      34391
+{txt}resident_t~n {c |}{res}         50    14833.16    5392.922       5746      30999
+{txt}{hline 13}{c +}{hline 57}
+student_po~n {c |}{res}         50    395672.3    467043.9      25692    2736006
+{txt}number_of_~e {c |}{res}         50      211600    392304.1          0    2200000
+{txt}state_popu~n {c |}{res}         50     6269467     7007003     575251   3.81e+07
+{txt}number_of~rs {c |}{res}         50    813021.2     1892382       6771   1.06e+07
+{txt}graduation~n {c |}{res}         50       .4834    .0726358        .32         .7
+{txt}{hline 13}{c +}{hline 57}
+students_t~o {c |}{res}         50     14.3802    1.889782      10.13      19.65
+{txt}acceptance~n {c |}{res}         50       .7168    .0682863        .58        .96
+{txt}average_te~e {c |}{res}         50     52.9686    8.373105      32.03      72.95
+
+{com}. tabulate state
+
+         {txt}State {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+       Alabama {c |}{res}          1        2.00        2.00
+{txt}        Alaska {c |}{res}          1        2.00        4.00
+{txt}       Arizona {c |}{res}          1        2.00        6.00
+{txt}      Arkansas {c |}{res}          1        2.00        8.00
+{txt}    California {c |}{res}          1        2.00       10.00
+{txt}      Colorado {c |}{res}          1        2.00       12.00
+{txt}   Connecticut {c |}{res}          1        2.00       14.00
+{txt}      Delaware {c |}{res}          1        2.00       16.00
+{txt}       Florida {c |}{res}          1        2.00       18.00
+{txt}       Georgia {c |}{res}          1        2.00       20.00
+{txt}        Hawaii {c |}{res}          1        2.00       22.00
+{txt}         Idaho {c |}{res}          1        2.00       24.00
+{txt}      Illinois {c |}{res}          1        2.00       26.00
+{txt}       Indiana {c |}{res}          1        2.00       28.00
+{txt}          Iowa {c |}{res}          1        2.00       30.00
+{txt}        Kansas {c |}{res}          1        2.00       32.00
+{txt}      Kentucky {c |}{res}          1        2.00       34.00
+{txt}     Louisiana {c |}{res}          1        2.00       36.00
+{txt}         Maine {c |}{res}          1        2.00       38.00
+{txt}      Maryland {c |}{res}          1        2.00       40.00
+{txt} Massachusetts {c |}{res}          1        2.00       42.00
+{txt}      Michigan {c |}{res}          1        2.00       44.00
+{txt}     Minnesota {c |}{res}          1        2.00       46.00
+{txt}   Mississippi {c |}{res}          1        2.00       48.00
+{txt}      Missouri {c |}{res}          1        2.00       50.00
+{txt}       Montana {c |}{res}          1        2.00       52.00
+{txt}      Nebraska {c |}{res}          1        2.00       54.00
+{txt}        Nevada {c |}{res}          1        2.00       56.00
+{txt} New Hampshire {c |}{res}          1        2.00       58.00
+{txt}    New Jersey {c |}{res}          1        2.00       60.00
+{txt}    New Mexico {c |}{res}          1        2.00       62.00
+{txt}      New York {c |}{res}          1        2.00       64.00
+{txt}North Carolina {c |}{res}          1        2.00       66.00
+{txt}  North Dakota {c |}{res}          1        2.00       68.00
+{txt}          Ohio {c |}{res}          1        2.00       70.00
+{txt}      Oklahoma {c |}{res}          1        2.00       72.00
+{txt}        Oregon {c |}{res}          1        2.00       74.00
+{txt}  Pennsylvania {c |}{res}          1        2.00       76.00
+{txt}  Rhode Island {c |}{res}          1        2.00       78.00
+{txt}South Carolina {c |}{res}          1        2.00       80.00
+{txt}  South Dakota {c |}{res}          1        2.00       82.00
+{txt}     Tennessee {c |}{res}          1        2.00       84.00
+{txt}         Texas {c |}{res}          1        2.00       86.00
+{txt}          Utah {c |}{res}          1        2.00       88.00
+{txt}       Vermont {c |}{res}          1        2.00       90.00
+{txt}      Virginia {c |}{res}          1        2.00       92.00
+{txt}    Washington {c |}{res}          1        2.00       94.00
+{txt} West Virginia {c |}{res}          1        2.00       96.00
+{txt}     Wisconsin {c |}{res}          1        2.00       98.00
+{txt}       Wyoming {c |}{res}          1        2.00      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}         50      100.00
+
+{com}. tabulate
+{err}varlist required
+{txt}{search r(100), local:r(100);}
+
+{com}. scatter students_to_faculty_ratio state_population
+{res}
+{com}. scatter state_population number_of_undocmented_people
+{res}
+{com}. scatter number_of_undocmented_people state_population
+{res}
+{com}. rename lock_out_state Locked_States
+{res}
+{com}. label variable number_of_colleges "# Of Colleges"
+
+. label variable public "Public Universities"
+
+. label variable private "Private Universities"
+
+. label variable acceptance_rate "Acceptance Rate"
+
+. label variable sat_score "SAT Score"
+
+. label variable resident_tuition "Resident Tuition"
+
+. label variable student_population "Student Population"
+
+. label variable number_of_undocmented_people "# Of Undocmented People"
+
+. label variable state_population "State Population"
+
+. label variable number_of_spanish_speakers "# Of Spanish Speakers"
+
+. label variable graduation_proportion "Graduation Proportion"
+
+. label variable students_to_faculty_ratio "Students - Faculty Ratio"
+
+. label variable acceptance_proportion "Acceptance Proportion"
+
+. label variable average_temperature "Average Temperature"
+
+. scatter number_of_daca_recipients average_temperature
+{res}
+{com}. scatter average_temperature number_of_daca_recipients
+{res}
+{com}. regres average_temperature number_of_daca_recipients
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(1, 48)        = {res}     5.00
+{txt}       Model {c |} {res} 323.908813         1  323.908813   {txt}Prob > F        ={res}    0.0301
+{txt}    Residual {c |} {res} 3111.42682        48  64.8213921   {txt}R-squared       ={res}    0.0943
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0754
+{txt}       Total {c |} {res} 3435.33563        49  70.1088905   {txt}Root MSE        =   {res} 8.0512
+
+{txt}{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      average_temperature{col 27}{c |} Coefficient{col 39}  Std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+number_of_daca_recipients {c |}{col 27}{res}{space 2} .0000915{col 39}{space 2} .0000409{col 50}{space 1}    2.24{col 59}{space 3}0.030{col 67}{space 4} 9.20e-06{col 80}{space 3} .0001738
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2} 51.85178{col 39}{space 2} 1.243398{col 50}{space 1}   41.70{col 59}{space 3}0.000{col 67}{space 4} 49.35176{col 80}{space 3}  54.3518
+{txt}{hline 26}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regres number_of_daca_recipients average_temperature
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(1, 48)        = {res}     5.00
+{txt}       Model {c |} {res} 3.6485e+09         1  3.6485e+09   {txt}Prob > F        ={res}    0.0301
+{txt}    Residual {c |} {res} 3.5047e+10        48   730145668   {txt}R-squared       ={res}    0.0943
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0754
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res}  27021
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}number_of_daca_re~s{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+average_temperature {c |}{col 21}{res}{space 2} 1030.558{col 33}{space 2} 461.0204{col 44}{space 1}    2.24{col 53}{space 3}0.030{col 61}{space 4} 103.6142{col 74}{space 3} 1957.502
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-42380.41{col 33}{space 2}  24716.8{col 44}{space 1}   -1.71{col 53}{space 3}0.093{col 61}{space 4}-92076.86{col 74}{space 3} 7316.047
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. scatter resident_tuition number_of_daca_recipients
+{res}
+{com}. scatter number_of_daca_recipients resident_tuition
+{res}
+{com}. scatter number_of_daca_recipients state_population
+{res}
+{com}. graph pie, over(Locked_States)
+{res}
+{com}. label define Locked_States 0 "Not Locked" 1 "Locked"
+
+. label values Locked_States Locked_States
+
+. graph pie , over(Locked_States)
+{res}
+{com}. label define Locked_States 0 "Locked" 1 "Not Locked", replace
+
+. graph pie , over(Locked_States)
+{res}
+{com}. {res}{com}graph save "Graph" "/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph"
+{res}{txt}file {bf:/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph} saved
+
+{com}. graph save "Graph" "/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph", replace
+{res}{txt}file {bf:/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph} saved
+
+{com}. scatter number_of_daca_recipients state_population
+{res}
+{com}. scatter number_of_daca_recipients number_of_spanish_speakers
+{res}
+{com}. scatter number_of_daca_recipients number_of_undocmented_people
+{res}
+{com}. scatter number_of_daca_recipients number_of_colleges
+{res}
+{com}. regress number_of_daca_recipients number_of_colleges
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(1, 48)        = {res}    90.69
+{txt}       Model {c |} {res} 2.5303e+10         1  2.5303e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 1.3392e+10        48   279001350   {txt}R-squared       ={res}    0.6539
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6467
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res}  16703
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}number_of_daca_r~s{col 20}{c |} Coefficient{col 32}  Std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+number_of_colleges {c |}{col 20}{res}{space 2} 164.3548{col 32}{space 2} 17.25821{col 43}{space 1}    9.52{col 52}{space 3}0.000{col 60}{space 4} 129.6548{col 73}{space 3} 199.0547
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}-9997.529{col 32}{space 2} 3319.083{col 43}{space 1}   -3.01{col 52}{space 3}0.004{col 60}{space 4}-16670.99{col 73}{space 3}-3324.065
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress number_of_daca_recipients number_of_colleges
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(1, 48)        = {res}    90.69
+{txt}       Model {c |} {res} 2.5303e+10         1  2.5303e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 1.3392e+10        48   279001350   {txt}R-squared       ={res}    0.6539
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6467
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res}  16703
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}number_of_daca_r~s{col 20}{c |} Coefficient{col 32}  Std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+number_of_colleges {c |}{col 20}{res}{space 2} 164.3548{col 32}{space 2} 17.25821{col 43}{space 1}    9.52{col 52}{space 3}0.000{col 60}{space 4} 129.6548{col 73}{space 3} 199.0547
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}-9997.529{col 32}{space 2} 3319.083{col 43}{space 1}   -3.01{col 52}{space 3}0.004{col 60}{space 4}-16670.99{col 73}{space 3}-3324.065
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. predict dacahat, xb
+
+. sort number_of_colleges
+
+. twoway (scatter number_of_daca_recipients number_of_colleges) (line dacahat number_of_colleges)
+{res}
+{com}. {res}{com}graph save "Graph" "/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph", replace
+{res}{txt}file {bf:/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph} saved
+
+{com}. graph save "Graph" "/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph", replace
+{res}{txt}file {bf:/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Graph.gph} saved
+
+{com}. twoway (scatter number_of_daca_recipients number_of_colleges) (line dacahat number_of_colleges), title ("Scatterplot of # of colleges on Daca recipients + Regression model") ytitle ("Daca Recipients") xtitle ("# Of Public Colleges")
+{err}unmatched quote
+{txt}{search r(198), local:r(198);}
+
+{com}. hist number_of_colleges
+{txt}(bin={res}7{txt}, start={res}10{txt}, width={res}103.85714{txt})
+{res}
+{com}. histogram number_of_colleges, normal
+{txt}(bin={res}7{txt}, start={res}10{txt}, width={res}103.85714{txt})
+{res}
+{com}. regress number_of_daca_recipients number_of_colleges tuition number_of_undocmented_people number_of_spanish_speakers
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(4, 45)        = {res}   169.39
+{txt}       Model {c |} {res} 3.6286e+10         4  9.0714e+09   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 2.4098e+09        45  53552218.2   {txt}R-squared       ={res}    0.9377
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9322
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res} 7317.9
+
+{txt}{hline 29}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}   number_of_daca_recipients{col 30}{c |} Coefficient{col 42}  Std. err.{col 54}      t{col 62}   P>|t|{col 70}     [95% con{col 83}f. interval]
+{hline 29}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}number_of_colleges {c |}{col 30}{res}{space 2}-22.73862{col 42}{space 2} 15.60176{col 53}{space 1}   -1.46{col 62}{space 3}0.152{col 70}{space 4}-54.16218{col 83}{space 3} 8.684937
+{txt}{space 21}tuition {c |}{col 30}{res}{space 2}-.0969323{col 42}{space 2} .2115118{col 53}{space 1}   -0.46{col 62}{space 3}0.649{col 70}{space 4}-.5229389{col 83}{space 3} .3290742
+{txt}number_of_undocmented_people {c |}{col 30}{res}{space 2} .0470803{col 42}{space 2} .0175384{col 53}{space 1}    2.68{col 62}{space 3}0.010{col 70}{space 4}  .011756{col 83}{space 3} .0824045
+{txt}{space 2}number_of_spanish_speakers {c |}{col 30}{res}{space 2} .0060986{col 42}{space 2} .0034453{col 53}{space 1}    1.77{col 62}{space 3}0.083{col 70}{space 4}-.0008407{col 83}{space 3} .0130378
+{txt}{space 23}_cons {c |}{col 30}{res}{space 2} 2177.082{col 42}{space 2} 4042.215{col 53}{space 1}    0.54{col 62}{space 3}0.593{col 70}{space 4}-5964.357{col 83}{space 3} 10318.52
+{txt}{hline 29}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress number_of_daca_recipients number_of_colleges tuition number_of_undocmented_people average_temperature
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(4, 45)        = {res}   163.49
+{txt}       Model {c |} {res} 3.6204e+10         4  9.0511e+09   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 2.4912e+09        45  55361067.9   {txt}R-squared       ={res}    0.9356
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9299
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res} 7440.5
+
+{txt}{hline 29}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}   number_of_daca_recipients{col 30}{c |} Coefficient{col 42}  Std. err.{col 54}      t{col 62}   P>|t|{col 70}     [95% con{col 83}f. interval]
+{hline 29}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}number_of_colleges {c |}{col 30}{res}{space 2}-22.74188{col 42}{space 2} 15.88184{col 53}{space 1}   -1.43{col 62}{space 3}0.159{col 70}{space 4}-54.72955{col 83}{space 3} 9.245779
+{txt}{space 21}tuition {c |}{col 30}{res}{space 2}-.2372563{col 42}{space 2} .2235808{col 53}{space 1}   -1.06{col 62}{space 3}0.294{col 70}{space 4}-.6875713{col 83}{space 3} .2130586
+{txt}number_of_undocmented_people {c |}{col 30}{res}{space 2} .0775966{col 42}{space 2} .0056014{col 53}{space 1}   13.85{col 62}{space 3}0.000{col 70}{space 4} .0663148{col 83}{space 3} .0888785
+{txt}{space 9}average_temperature {c |}{col 30}{res}{space 2}-178.3131{col 42}{space 2} 142.7402{col 53}{space 1}   -1.25{col 62}{space 3}0.218{col 70}{space 4}-465.8066{col 83}{space 3} 109.1804
+{txt}{space 23}_cons {c |}{col 30}{res}{space 2} 12756.42{col 42}{space 2} 9467.231{col 53}{space 1}    1.35{col 62}{space 3}0.185{col 70}{space 4}-6311.561{col 83}{space 3}  31824.4
+{txt}{hline 29}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. regress number_of_daca_recipients number_of_colleges number_of_undocmented_people average_temperature
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        50
+{txt}{hline 13}{c +}{hline 34}   F(3, 46)        = {res}   217.02
+{txt}       Model {c |} {res} 3.6142e+10         3  1.2047e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 2.5536e+09        46  55512796.7   {txt}R-squared       ={res}    0.9340
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9297
+{txt}       Total {c |} {res} 3.8695e+10        49   789703847   {txt}Root MSE        =   {res} 7450.7
+
+{txt}{hline 29}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}   number_of_daca_recipients{col 30}{c |} Coefficient{col 42}  Std. err.{col 54}      t{col 62}   P>|t|{col 70}     [95% con{col 83}f. interval]
+{hline 29}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}number_of_colleges {c |}{col 30}{res}{space 2}-25.60486{col 42}{space 2} 15.67243{col 53}{space 1}   -1.63{col 62}{space 3}0.109{col 70}{space 4}-57.15183{col 83}{space 3} 5.942113
+{txt}number_of_undocmented_people {c |}{col 30}{res}{space 2} .0778926{col 42}{space 2} .0056021{col 53}{space 1}   13.90{col 62}{space 3}0.000{col 70}{space 4} .0666161{col 83}{space 3} .0891691
+{txt}{space 9}average_temperature {c |}{col 30}{res}{space 2}-131.7686{col 42}{space 2} 136.0202{col 53}{space 1}   -0.97{col 62}{space 3}0.338{col 70}{space 4} -405.563{col 83}{space 3} 142.0258
+{txt}{space 23}_cons {c |}{col 30}{res}{space 2} 6163.539{col 42}{space 2} 7153.223{col 53}{space 1}    0.86{col 62}{space 3}0.393{col 70}{space 4}-8235.152{col 83}{space 3} 20562.23
+{txt}{hline 29}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/juanvillegas/Library/CloudStorage/OneDrive-EasternConnecticutStateUniversity/3rd Year/Spring 2021/ECO 305 Econmetrics/Project Data/Stata .smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}26 Mar 2022, 16:01:56
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
